@@ -33,9 +33,19 @@
 			<locationURI>ArduinoLibPath/AFMotor</locationURI>
 		</link>
 		<link>
+			<name>Servo</name>
+			<type>2</type>
+			<locationURI>ArduinoLibPath/Servo</locationURI>
+		</link>
+		<link>
 			<name>SoftwareSerial</name>
 			<type>2</type>
 			<locationURI>ArduinoLibPath/SoftwareSerial</locationURI>
+		</link>
+		<link>
+			<name>USB_Host_Shield_20</name>
+			<type>2</type>
+			<locationURI>ArduinoLibPath/USB_Host_Shield_20</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
