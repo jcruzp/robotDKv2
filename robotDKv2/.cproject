@@ -42,6 +42,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/robotDKv2/rDK_MotoresDC}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/robotDKv2/rDK_Mover}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/robotDKv2/SoftwareSerial}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/robotDKv2/Servo}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/robotDKv2/USB_Host_Shield_20}&quot;"/>
 								</option>
 								<option id="it.baeyens.avreclipse.compiler.option.def.1485111403" name="Define Syms (-D)" superClass="it.baeyens.avreclipse.compiler.option.def" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__IN_ECLIPSE__=1"/>
@@ -69,6 +71,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/robotDKv2/rDK_MotoresDC}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/robotDKv2/rDK_Mover}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/robotDKv2/SoftwareSerial}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/robotDKv2/Servo}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/robotDKv2/USB_Host_Shield_20}&quot;"/>
 								</option>
 								<option id="it.baeyens.avreclipse.cppcompiler.option.def.479432623" name="Define Syms (-D)" superClass="it.baeyens.avreclipse.cppcompiler.option.def" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__IN_ECLIPSE__=1"/>
@@ -107,9 +111,11 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="SoftwareSerial|AFMotor|rDK_GLCD|rDK_MotoresDC|rDK_Mover" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="USB_Host_Shield_20|Servo|SoftwareSerial|AFMotor|rDK_GLCD|rDK_MotoresDC|rDK_Mover" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="AFMotor"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Servo"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="SoftwareSerial"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="USB_Host_Shield_20"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="rDK_GLCD"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="rDK_MotoresDC"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="rDK_Mover"/>
@@ -137,5 +143,9 @@
 		<project id="robotDKv2.null.501658289" name="robotDKv2"/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/robotDKv2"/>
+		</configuration>
+	</storageModule>
 </cproject>

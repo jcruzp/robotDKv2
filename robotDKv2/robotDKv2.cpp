@@ -1,21 +1,7 @@
 // Do not remove the include below
 #include "robotDKv2.h"
 
-#include <Wii.h>
-#include <Servo.h>
 
-USB Usb;
-BTD Btd(&Usb); // You have to create the Bluetooth Dongle instance like so
-/* You can create the instance of the class in two ways */
-WII Wii(&Btd,PAIR); // This will start an inquiry and then pair with your Wiimote - you only have to do this once
-//WII Wii(&Btd); // After that you can simply create the instance like so and then press any button on the Wiimote
-
-Servo pan;
-Servo tilt;
-long currentX=0;
-long currentY=0;
-
-bool printAngle;
 
 //The setup function is called once at startup of the sketch
 void setup()
@@ -45,21 +31,25 @@ void loop()
 	        Wii.setAllOff();
 	        Wii.setLedOn(LED1);
 	        Serial.print(F("\r\nLeft"));
+	        moveLeft();
 	      }
 	      if(Wii.getButtonClick(RIGHT)) {
 	        Wii.setAllOff();
 	        Wii.setLedOn(LED3);
 	        Serial.print(F("\r\nRight"));
+	        moveRight();
 	      }
 	      if(Wii.getButtonClick(DOWN)) {
 	        Wii.setAllOff();
 	        Wii.setLedOn(LED4);
 	        Serial.print(F("\r\nDown"));
+	        moveBackward();
 	      }
 	      if(Wii.getButtonClick(UP)) {
 	        Wii.setAllOff();
 	        Wii.setLedOn(LED2);
 	        Serial.print(F("\r\nUp"));
+	        moveForward();
 	      }
 
 	      if(Wii.getButtonClick(PLUS))
@@ -99,11 +89,7 @@ void loop()
 	        Serial.print(Wii.nunchuckPitch);
 	        Serial.print(F("\tNunchuck Roll: "));
 	        Serial.print(Wii.nunchuckRoll);
-	       currentX = map((long)Wii.nunchuckRoll, 0, 350, 0, 180);
-	      currentY = map((long)Wii.nunchuckPitch, 0, 350, 180, 0);
-	      pan.write(currentX);
-	      tilt.write(currentY);
-
+	        MoverCamera(Wii.nunchuckRoll,Wii.nunchuckPitch);
 	      }
 	    }
 
